@@ -23,6 +23,7 @@ const SignUp = () => {
 
     if (user || gUser) {
         console.log(user || gUser);
+        // navigate('/appointment');
     }
 
     if (loading || gLoading || updating) {
@@ -37,7 +38,7 @@ const SignUp = () => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         console.log("Update Done");
-        navigate('/appointment');
+        
     };
     return (
         <div className='flex h-screen justify-center items-center'>
